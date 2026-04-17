@@ -13,6 +13,6 @@ jobs:
       - name: Check website health
         uses: jtalk/url-health-check-action@v3
         with:
-          url: .github/workflows/healthcheck.yml
+          url: https://fullstack-cicd-app.onrender.com
           max-attempts: 3
           retry-delay: 5s
