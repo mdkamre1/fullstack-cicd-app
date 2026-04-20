@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  pull_request: 
   pull_request:
 
 jobs:
@@ -35,5 +36,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Deploy
+        run: echo "Deploying app..."
       - name: Deploy to Render
         run: curl ${{ secrets.RENDER_DEPLOY_HOOK }}
